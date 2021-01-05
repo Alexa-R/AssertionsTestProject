@@ -1,12 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 using CollectionAssert = Microsoft.VisualStudio.TestTools.UnitTesting.CollectionAssert;
 using StringAssert = Microsoft.VisualStudio.TestTools.UnitTesting.StringAssert;
 
-namespace AssertionsTestProject
+namespace AssertionsTestProject.UnitTests
 {
     [TestClass]
     public class UnitTestsUsingMsTest
