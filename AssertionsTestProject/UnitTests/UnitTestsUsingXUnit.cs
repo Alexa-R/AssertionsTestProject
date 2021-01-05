@@ -56,7 +56,7 @@ namespace AssertionsTestProject.UnitTests
         }
 
         [Fact]
-        public void IsCollectionsEquals()
+        public void IsCollectionsEqual()
         {
             List<int> list1 = new List<int>() {1, 2, 3, 4};
             List<int> list2 = new List<int>() {1, 2, 3, 4};
