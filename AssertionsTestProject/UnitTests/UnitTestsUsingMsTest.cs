@@ -14,8 +14,8 @@ namespace AssertionsTestProject.UnitTests
         [TestMethod]
         public void IsStringContainsSubstring()
         {
-            string stringValue = "programming language";
-            string substring = "program";
+            var stringValue = "programming language";
+            var substring = "program";
 
             StringAssert.Contains(stringValue, substring);
         }
@@ -23,8 +23,8 @@ namespace AssertionsTestProject.UnitTests
         [TestMethod]
         public void IsValidEmail()
         {
-            string email = "sasha@mail.ru";
-            Regex emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+            var email = "sasha@mail.ru";
+            var emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
 
             StringAssert.Matches(email, emailRegex);
         }
@@ -32,9 +32,9 @@ namespace AssertionsTestProject.UnitTests
         [TestMethod]
         public void IsObjectsReferToSameObject()
         {
-            object obj1 = new object();
-            object obj2 = obj1;
-            object obj3 = obj1;
+            var obj1 = new object();
+            var obj2 = obj1;
+            var obj3 = obj1;
 
             Assert.AreSame(obj2, obj3);
         }
@@ -62,8 +62,8 @@ namespace AssertionsTestProject.UnitTests
         [TestMethod]
         public void IsCollectionsEqual()
         {
-            List<int> list1 = new List<int>() {1, 2, 3, 4};
-            List<int> list2 = new List<int>() {1, 2, 3, 4};
+            var list1 = new List<int>() {1, 2, 3, 4};
+            var list2 = new List<int>() {1, 2, 3, 4};
 
             CollectionAssert.AreEqual(list1, list2);
         }
@@ -74,7 +74,7 @@ namespace AssertionsTestProject.UnitTests
         [DataRow(1)]
         public void IsCollectionContainsEl(int elem)
         {
-            List<int> list1 = new List<int>() {1, 2, 3, 4};
+            var list1 = new List<int>() {1, 2, 3, 4};
 
             CollectionAssert.Contains(list1, elem);
         }
@@ -84,7 +84,7 @@ namespace AssertionsTestProject.UnitTests
         public void IsMethodThrowsException()
         {
             object obj = "some string";
-            int num = (int) obj;
+            var num = (int) obj;
         }
     }
 }

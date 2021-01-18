@@ -10,8 +10,8 @@ namespace AssertionsTestProject.UnitTests
         [Fact]
         public void IsStringContainsSubstring()
         {
-            string stringValue = "programming language";
-            string substring = "program";
+            var stringValue = "programming language";
+            var substring = "program";
 
             Assert.Contains(substring, stringValue);
         }
@@ -19,8 +19,8 @@ namespace AssertionsTestProject.UnitTests
         [Fact]
         public void IsValidEmail()
         {
-            string email = "sasha@mail.ru";
-            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            var email = "sasha@mail.ru";
+            var emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
             Assert.Matches(emailPattern, email);
         }
@@ -28,9 +28,9 @@ namespace AssertionsTestProject.UnitTests
         [Fact]
         public void IsObjectsReferToSameObject()
         {
-            object obj1 = new object();
-            object obj2 = obj1;
-            object obj3 = obj1;
+            var obj1 = new object();
+            var obj2 = obj1;
+            var obj3 = obj1;
 
             Assert.Same(obj2, obj3);
         }
@@ -58,8 +58,8 @@ namespace AssertionsTestProject.UnitTests
         [Fact]
         public void IsCollectionsEqual()
         {
-            List<int> list1 = new List<int>() {1, 2, 3, 4};
-            List<int> list2 = new List<int>() {1, 2, 3, 4};
+            var list1 = new List<int>() {1, 2, 3, 4};
+            var list2 = new List<int>() {1, 2, 3, 4};
 
             Assert.Equal(list1, list2);
         }
@@ -70,7 +70,7 @@ namespace AssertionsTestProject.UnitTests
         [InlineData(1)]
         public void IsCollectionContainsEl(int elem)
         {
-            List<int> list1 = new List<int>() {1, 2, 3, 4};
+            var list1 = new List<int>() {1, 2, 3, 4};
 
             Assert.Contains(elem, list1);
         }
@@ -84,7 +84,7 @@ namespace AssertionsTestProject.UnitTests
         private void MethodThatThrowsException()
         {
             object obj = "some string";
-            int num = (int) obj;
+            var num = (int) obj;
         }
     }
 }
