@@ -17,7 +17,7 @@ namespace AssertionsTestProject.UnitTests
             string stringValue = "programming language";
             string substring = "program";
 
-            StringAssert.Contains(stringValue.ToUpper(), substring.ToUpper());
+            StringAssert.Contains(stringValue, substring);
         }
 
         [TestMethod]

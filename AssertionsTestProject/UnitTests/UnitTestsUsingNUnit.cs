@@ -13,7 +13,7 @@ namespace AssertionsTestProject.UnitTests
             string stringValue = "programming language";
             string substring = "program";
 
-            Assert.That(stringValue, Contains.Substring(substring).IgnoreCase);
+            Assert.That(stringValue, Contains.Substring(substring));
         }
 
         [Test]
